@@ -4,24 +4,27 @@ let keyData=[
   {key:74,char:"J",sound:"snare"}
 ];
 
-let numbers=[1,2,3,4,5,6,7,8,9];
-
-const body = document.getElementById(`body`);
+const body = document.getElementById(`buttonsDiv`);
 const audio= document.getElementById('audio');
 (function(){
   keyData.map((data,i)=>{
-    body.insertAdjacentHTML(`afterbegin`,
-                            `<div data-key="${data.key}" class="key">
+    body.insertAdjacentHTML(`beforeend`,
+                            `<div id="keys" data-key="${data.key}" class="key">
                                 <kbd>${data.char}</kbd>
                                 <span class="sound">${data.sound}</span>
                                                                 </div>`);
+    document.querySelector(`div[data-key="${data.key}"]`).addEventListener('animationend',(e)=>{
+       e.srcElement.classList.remove('shake');
+    })
     audio.insertAdjacentHTML('afterbegin',`<audio data-key="${data.key}" src="http://www.soundjay.com/button/button-${i+1}.mp3"></audio>`)
   });
 })();
 
 window.addEventListener('keydown',(e)=>{
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+  const btn = document.querySelector(`div[data-key="${e.keyCode}"]`);
   if(!audio) return;
   audio.currentTime=0;
   audio.play();
-})
+  btn.classList.add('shake');
+});

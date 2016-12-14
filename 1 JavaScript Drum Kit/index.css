@@ -1,0 +1,41 @@
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+.shake {
+  animation-name: shake;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+body{
+  text-align: center;
+  color: #95a5a6;
+}
+#buttonsDiv{
+  margin-top: auto;
+}
+kbd{
+  display: inline-block;
+}
+#keys{
+  margin-top: 5px;
+  color:white;
+  margin-left: auto;
+  margin-right: auto;
+  font-size:50px;
+}
+
+body{
+  background-color: #2980b9;
+}
