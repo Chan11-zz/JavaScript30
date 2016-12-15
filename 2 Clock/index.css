@@ -1,31 +1,43 @@
 .clock{
   border: 5px solid #009688;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   border-radius: 500px;
   display: block;
-  margin: 100px auto;
+  margin: 80px auto;
 }
 
 body{
-  #2c3e50
+  background-color: #2c3e50;
 }
 
 h1{
   text-align: center;
+  font-family: Verdana;
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color:white;
 }
 
 #hours,#minutes,#seconds{
-  width:250px;
+  width:200px;
   height:6px;
   background-color:black;
+  transform-origin: 100%;
+  transition:all 0.5s;
+  position: absolute;
+  margin-top: 200px;
+  transform: rotate(90deg);
 }
 #hours{
-  margin-top: 250px;
+  background-color: #c0392b;
 }
 #minutes{
-  margin:0;
+  background-color: #7f8c8d;
 }
 #seconds{
-  margin:0;
+  background-color: #27ae60;
 }
