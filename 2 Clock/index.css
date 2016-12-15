@@ -1,0 +1,31 @@
+.clock{
+  border: 5px solid #009688;
+  width: 500px;
+  height: 500px;
+  border-radius: 500px;
+  display: block;
+  margin: 100px auto;
+}
+
+body{
+  #2c3e50
+}
+
+h1{
+  text-align: center;
+}
+
+#hours,#minutes,#seconds{
+  width:250px;
+  height:6px;
+  background-color:black;
+}
+#hours{
+  margin-top: 250px;
+}
+#minutes{
+  margin:0;
+}
+#seconds{
+  margin:0;
+}
